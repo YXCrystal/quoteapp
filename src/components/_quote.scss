@@ -1,0 +1,23 @@
+.quote-box {
+	background-color: rgba(white, 0.6);
+	width: 35%;
+	padding: 3.5rem;
+	padding-bottom: 4rem;
+	margin: 0 auto;
+	margin-top: 15rem;
+	position: relative;
+	border-radius: 0.5rem;
+	border: 10px solid $light-blue;
+}
+
+.paragraph {
+	font-size: 2rem;
+}
+
+.author {
+	font-size: 1.5rem;
+	position: absolute;
+	right: 0;
+	margin: 1rem 0;
+	margin-right: 3.5rem;
+}
