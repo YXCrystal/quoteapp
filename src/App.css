@@ -4,7 +4,7 @@
   padding: 3.5rem;
   padding-bottom: 4rem;
   margin: 0 auto;
-  margin-top: 15rem;
+  margin-top: 10rem;
   position: relative;
   border-radius: 0.5rem;
   border: 10px solid #75c3ff;
@@ -20,6 +20,7 @@
   right: 0;
   margin: 1rem 0;
   margin-right: 3.5rem;
+  color: #636363;
 }
 
 .loader {
@@ -56,6 +57,25 @@
   }
 }
 
+.buttons {
+  margin-top: 5rem;
+}
+
+.buttons--new {
+  text-decoration: none;
+  color: #636363;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+}
+
+.buttons--new:hover {
+  background-color: white;
+  color: black;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -71,7 +91,7 @@ html {
   color: white;
   font-size: 6rem;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-  padding-top: 5rem;
+  padding-top: 8rem;
 }
 
 .container {

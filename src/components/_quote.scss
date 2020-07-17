@@ -4,7 +4,7 @@
 	padding: 3.5rem;
 	padding-bottom: 4rem;
 	margin: 0 auto;
-	margin-top: 15rem;
+	margin-top: 10rem;
 	position: relative;
 	border-radius: 0.5rem;
 	border: 10px solid $light-blue;
@@ -20,6 +20,7 @@
 	right: 0;
 	margin: 1rem 0;
 	margin-right: 3.5rem;
+	color: $medium-grey;
 }
 
 .loader {
@@ -39,5 +40,24 @@
 	}
 	100% {
 		transform: rotate(360deg);
+	}
+}
+
+.buttons {
+	margin-top: 5rem;
+
+	&--new {
+		text-decoration: none;
+		color: $medium-grey;
+		background-color: rgba(white, 0.7);
+		padding: 1rem 2rem;
+		font-size: 2rem;
+		border-radius: 0.5rem;
+		text-transform: uppercase;
+
+		&:hover {
+			background-color: white;
+			color: black;
+		}
 	}
 }
