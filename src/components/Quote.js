@@ -1,22 +1,34 @@
 import React from "react";
+import { connect } from "react-redux";
+import { fetchQuote } from "../actions";
 import "../App.css";
 
 class Quote extends React.Component {
+	componentDidMount() {
+		this.props.fetchQuote();
+	}
+
 	render() {
-		return (
-			<div class="quote-box">
-				<p class="paragraph">
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus eius
-					nostrum inventore architecto doloribus aliquid eligendi cumque quibusdam
-					odit sapiente quasi asperiores expedita voluptatibus autem, tenetur vitae
-					rem reiciendis excepturi.
-				</p>
-				<p class="author">
-					<em> - John Doe </em>
-				</p>
-			</div>
-		);
+		if (this.props.quote) {
+			return (
+				<div className="quote-box">
+					<p className="paragraph">{this.props.quote.text}</p>
+					<p className="author">
+						<em> - {this.props.quote.author || "Anonymous"} </em>
+					</p>
+				</div>
+			);
+		} else {
+			return (
+				<div>
+					<h1> Loading </h1>
+				</div>
+			);
+		}
 	}
 }
 
-export default Quote;
+const mapStateToProps = state => {
+	return { quote: state.quote };
+};
+export default connect(mapStateToProps, { fetchQuote })(Quote);
